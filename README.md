@@ -1,11 +1,13 @@
 # Atelier HAOS
 
 `atelier_haos` is a local-first Home Assistant add-on that provides an
-Atelier-based development environment over SSH for managing and editing Home
-Assistant configurations. HAOS is short for Home Assistant Operating System.
-The add-on includes Neovim, Codex, and Claude Code, backed by a persistent home
+[Atelier-based](https://github.com/jeremytondo/atelier) development environment over SSH for managing and editing Home
+Assistant configurations. The add-on includes Neovim, Codex, and Claude Code, backed by a persistent home
 directory under `/data` and a writable mount of the real Home Assistant config
 at `/homeassistant`.
+
+> [!WARNING]
+> Don't use this add-on. No, really. You could do some serious damage to your Home Assistant config if you don't know what you're doing.
 
 ## Install From GitHub
 
