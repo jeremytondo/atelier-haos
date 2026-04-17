@@ -1,6 +1,6 @@
 # Atelier HAOS
 
-`atelier_haos` is a local-first Home Assistant add-on that provides an
+`atelier_haos` is a Home Assistant add-on that provides an
 [Atelier-based](https://github.com/jeremytondo/atelier) development environment over SSH for managing and editing Home
 Assistant configurations. The add-on includes Neovim, Codex, and Claude Code, backed by a persistent home
 directory under `/data` and a writable mount of the real Home Assistant config
@@ -11,12 +11,11 @@ at `/homeassistant`.
 
 ## Install From GitHub
 
-1. Push this repository to GitHub.
-2. In Home Assistant, open **Settings -> Add-ons -> Add-on Store**.
-3. Open the overflow menu, choose **Repositories**, and add your repository URL.
-4. Install **Atelier HAOS** from the store.
-5. Paste one or more SSH public keys into `authorized_keys` in the add-on config.
-6. Start the add-on and connect with `ssh -p 2222 atelier@homeassistant.local`.
+1. In Home Assistant, open **Settings -> Add-ons -> Add-on Store**.
+2. Open the overflow menu, choose **Repositories**, and add `https://github.com/jeremytondo/atelier-haos`.
+3. Install **Atelier HAOS** from the store.
+4. Paste one or more SSH public keys into `authorized_keys` in the add-on config.
+5. Start the add-on and connect with `ssh -p 2222 atelier@homeassistant.local`.
 
 ## Install From `/addons/local`
 
@@ -31,7 +30,7 @@ at `/homeassistant`.
 Create a local data directory and write `options.json` at the root of that
 directory before starting the container. The container reads
 `/data/options.json`, so if you mount `/tmp/atelier_haos_data` to `/data`, the
-file must exist at `/tmp/atelier_haos_data/options.json` on the host.
+file must exist at `/tmp/atelier_haos_data/options.json`.
 
 ```json
 {

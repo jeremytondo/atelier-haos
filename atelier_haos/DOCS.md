@@ -2,8 +2,7 @@
 
 `atelier_haos` gives you an SSH shell inside a Home Assistant add-on with a
 persistent `$HOME`, a pinned Atelier shell/editor config, and direct access to
-the real Home Assistant config mounted at `/homeassistant`. HAOS is short for
-Home Assistant Operating System.
+the real Home Assistant config mounted at `/homeassistant`.
 
 ## What Persists
 
