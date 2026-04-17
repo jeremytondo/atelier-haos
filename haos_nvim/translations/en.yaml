@@ -1,0 +1,9 @@
+configuration:
+  authorized_keys:
+    name: Authorized SSH Keys
+    description: Public keys allowed to log in as the fixed atelier user.
+  log_level:
+    name: Log Level
+    description: Controls startup logging verbosity and the SSH daemon log level.
+network:
+  2222/TCP: SSH access to the HA Nvim shell

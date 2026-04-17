@@ -1,0 +1,27 @@
+name: HA Nvim
+version: "0.1.0"
+slug: ha_nvim
+description: >-
+  SSH-first Home Assistant editing shell with Atelier, Neovim, Codex, and Claude Code.
+url: https://github.com/jeremytondo/HA-nvim
+startup: services
+init: false
+host_network: false
+arch:
+  - amd64
+  - aarch64
+ports:
+  2222/tcp: 2222
+ports_description:
+  2222/tcp: SSH access to the HA Nvim shell
+map:
+  - type: homeassistant_config
+    read_only: false
+    path: /homeassistant
+options:
+  authorized_keys: []
+  log_level: info
+schema:
+  authorized_keys:
+    - str
+  log_level: list(trace|debug|info|notice|warning|error|fatal)

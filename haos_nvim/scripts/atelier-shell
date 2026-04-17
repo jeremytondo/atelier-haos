@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+workspace="${HOME}/workspace"
+
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
+if [[ -d "${workspace}" ]]; then
+  cd "${workspace}"
+fi
+
+if [[ $# -gt 0 && "${1}" == "-c" ]]; then
+  shift
+  exec /bin/zsh -lc "$1"
+fi
+
+exec /bin/zsh -l
