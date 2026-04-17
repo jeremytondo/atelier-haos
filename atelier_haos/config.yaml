@@ -1,9 +1,9 @@
-name: HA Nvim
+name: Atelier HAOS
 version: "0.1.0"
-slug: ha_nvim
+slug: atelier_haos
 description: >-
-  SSH-first Home Assistant editing shell with Atelier, Neovim, Codex, and Claude Code.
-url: https://github.com/jeremytondo/HA-nvim
+  Atelier-based SSH development environment for editing and managing Home Assistant configurations.
+url: https://github.com/jeremytondo/atelier-haos
 startup: services
 init: false
 host_network: false
@@ -13,7 +13,7 @@ arch:
 ports:
   2222/tcp: 2222
 ports_description:
-  2222/tcp: SSH access to the HA Nvim shell
+  2222/tcp: SSH access to the Atelier HAOS shell
 map:
   - type: homeassistant_config
     read_only: false

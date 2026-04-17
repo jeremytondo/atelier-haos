@@ -104,7 +104,7 @@ main() {
   log_level="$(jq -r '.log_level // "info"' "${CONFIG_PATH}")"
   sshd_log_level="$(map_sshd_log_level "${log_level}")"
 
-  /opt/ha_nvim/scripts/bootstrap-home.sh
+  /opt/atelier_haos/scripts/bootstrap-home.sh
 
   if ! sudo -u atelier test -w /homeassistant; then
     log WARNING "atelier cannot write directly to /homeassistant with the current mount permissions"
@@ -123,7 +123,7 @@ main() {
 
   render_authorized_keys
 
-  /opt/ha_nvim/scripts/write-sshd-config.sh "${SSHD_CONFIG_PATH}" "${AUTHORIZED_KEYS_PATH}" "${sshd_log_level}"
+  /opt/atelier_haos/scripts/write-sshd-config.sh "${SSHD_CONFIG_PATH}" "${AUTHORIZED_KEYS_PATH}" "${sshd_log_level}"
 
   log INFO "Starting sshd on port 2222"
   exec /usr/sbin/sshd -D -e -f "${SSHD_CONFIG_PATH}"

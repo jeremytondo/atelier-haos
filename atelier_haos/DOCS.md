@@ -1,8 +1,9 @@
-# HA Nvim
+# Atelier HAOS
 
-`ha_nvim` gives you an SSH shell inside a Home Assistant add-on with a
+`atelier_haos` gives you an SSH shell inside a Home Assistant add-on with a
 persistent `$HOME`, a pinned Atelier shell/editor config, and direct access to
-the real Home Assistant config mounted at `/homeassistant`.
+the real Home Assistant config mounted at `/homeassistant`. HAOS is short for
+Home Assistant Operating System.
 
 ## What Persists
 
@@ -50,9 +51,9 @@ leaves it in place and logs that it was not replaced.
 
 When running the container outside Home Assistant, create `options.json`
 yourself in the host directory you mount to `/data`. For example, if you run
-Docker with `-v /tmp/ha_nvim_data:/data`, create the file at
-`/tmp/ha_nvim_data/options.json` on the host. The add-on expects the same JSON
-shape Home Assistant writes:
+Docker with `-v /tmp/atelier_haos_data:/data`, create the file at
+`/tmp/atelier_haos_data/options.json` on the host. The add-on expects the same
+JSON shape Home Assistant writes:
 
 ```json
 {

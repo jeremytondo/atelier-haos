@@ -6,4 +6,4 @@ configuration:
     name: Log Level
     description: Controls startup logging verbosity and the SSH daemon log level.
 network:
-  2222/TCP: SSH access to the HA Nvim shell
+  2222/TCP: SSH access to the Atelier HAOS shell

@@ -104,14 +104,14 @@ RUN git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions /usr/lo
 RUN ln -sf /usr/bin/fdfind /usr/local/bin/fd && \
     ln -sf /usr/bin/batcat /usr/local/bin/bat
 
-COPY scripts/bootstrap-home.sh /opt/ha_nvim/scripts/bootstrap-home.sh
-COPY scripts/write-sshd-config.sh /opt/ha_nvim/scripts/write-sshd-config.sh
+COPY scripts/bootstrap-home.sh /opt/atelier_haos/scripts/bootstrap-home.sh
+COPY scripts/write-sshd-config.sh /opt/atelier_haos/scripts/write-sshd-config.sh
 COPY scripts/atelier-shell /usr/local/bin/atelier-shell
 COPY run.sh /run.sh
 
 RUN chmod 0755 \
-      /opt/ha_nvim/scripts/bootstrap-home.sh \
-      /opt/ha_nvim/scripts/write-sshd-config.sh \
+      /opt/atelier_haos/scripts/bootstrap-home.sh \
+      /opt/atelier_haos/scripts/write-sshd-config.sh \
       /usr/local/bin/atelier-shell \
       /run.sh && \
     install -d -m 0755 /data/home /data/ssh /var/run/sshd && \
